@@ -1,7 +1,4 @@
 
-getgenv().PressEE = true
-getgenv().ChestTP = true
-getgenv().ForceCamera = true
 
 
 

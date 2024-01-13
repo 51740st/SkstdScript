@@ -3,6 +3,14 @@ getgenv().PressEE = true
 getgenv().ChestTP = true
 
 
+while true do
+wait()
+  pcall(function()
+local pos = Vector3.new(0,-16000,0)
+workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position,pos)
+end)
+end
+
 local VirtualInputManager = game:GetService('VirtualInputManager')        
 wait(0.5)local ba=Instance.new("ScreenGui")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")

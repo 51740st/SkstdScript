@@ -23,8 +23,8 @@ VirtualInputManager:SendKeyEvent(true, "E", false, nil)
         wait(3)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Chest.Position)
         wait(3)
-                end
-        end)
+                end)
+        end
 while getgenv().ForceCamera == true do
 wait()
   pcall(function()

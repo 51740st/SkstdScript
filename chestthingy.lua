@@ -9,6 +9,7 @@ getgenv().ForceCamera = true
 
         while getgenv().PressEE == true do
                  wait()
+    local VirtualInputManager = game:GetService('VirtualInputManager')
 VirtualInputManager:SendKeyEvent(true, "E", false, nil)
                        end
         while getgenv().ChestTP == true do

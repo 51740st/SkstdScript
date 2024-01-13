@@ -1,11 +1,36 @@
 
 getgenv().PressEE = true
 getgenv().ChestTP = true
+getgenv().ForceCamera = true
 
 
 
 
-local VirtualInputManager = game:GetService('VirtualInputManager')        
+
+        while getgenv().PressEE == true do
+                 wait()
+VirtualInputManager:SendKeyEvent(true, "E", false, nil)
+                       end
+        while getgenv().ChestTP == true do
+           pcall(function()
+           wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Box.Position)
+        wait(0.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Barrel.Position)
+        wait(0.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.SukunaFinger.Position)
+        wait(0.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Chest.Position)
+        wait(0.5)
+                end
+        end)
+while getgenv().ForceCamera == true do
+wait()
+  pcall(function()
+local pos = Vector3.new(0,-16000,0)
+workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position,pos)
+end)
+end
 wait(0.5)local ba=Instance.new("ScreenGui")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
 local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
@@ -25,35 +50,4 @@ ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
 bb:CaptureController()bb:ClickButton2(Vector2.new())
 ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
-        function PressE()
 
-        while getgenv().PressEE == true do
-                 wait()
-VirtualInputManager:SendKeyEvent(true, "E", false, nil)
-                       end
-end
-    function ChestTelport()
-        while getgenv().ChestTP == true do
-           pcall(function()
-           wait()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Box.Position)
-        wait(0.5)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Barrel.Position)
-        wait(0.5)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.SukunaFinger.Position)
-        wait(0.5)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Item.Chest.Position)
-        wait(0.5)
-                       end)
-                       end
-                       end
-
-ChestTelport()
-PressE()
-while true do
-wait()
-  pcall(function()
-local pos = Vector3.new(0,-16000,0)
-workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position,pos)
-end)
-end

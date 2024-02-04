@@ -63,6 +63,6 @@ ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status 
 while true do wait()
    pcall(function()
 game:GetService("ReplicatedStorage").GlobalUsedRemotes.Play:FireServer()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7397.93994140625, -427.56561279296875, -4016.93310546875)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2107.655517578125, -115.68780517578125, -4704.802734375)
 end)
 end
